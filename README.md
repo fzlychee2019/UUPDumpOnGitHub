@@ -1,17 +1,42 @@
-# UUPDump Script on Github Actions
-tries to initialize Github Workflow to Automate Build Dump ISOs & Provide Download Links with GoFile instead of running on End-Users
+## UUPDump Script on Github Actions
+The Steps Below will Guide You to use Github Workflow to Automate Build Dump ISOs & Provide Download Links with GoFile instead of running on Your Windows Machine at ease!
 
-# Current Configurations
-Windows 11 26100.3037 Stock. ESD Compression is Enabled
+## Step 1: Fork the Repository
 
-Only Windows Pro is Being Built, edit *"ConvertConfig.ini"* to Change this.
+1. **Fork the Repository**:  
+   In the top-right corner of the page, click the **Fork** button. This creates a copy of the repository under your GitHub account.
 
-# Usage
-1. Fork this repo
-2. Get your UUPDump zip and extract it.
-3. Open *"uup_download_windows.cmd"* with notepad and overwrite the contents to *"start.cmd"* availble in repo and **Apply the Changes**
-4. Edit *"ConvertConfig.ini"* and *"CustomAppsList.txt"* to your liking and **Apply the Changes**
-5. Go to "Actions" and trigger the workflow
-6. Download Your Image with Link Provided From Workflow
-7. Profit!
+## Step 2: Get & Upload Your UUPDump Zips
+
+1. **Get Your UUPDump**:  
+   - https://uupdump.net/
+   - You will need to Make yourself a zip through UUPDump first.
+
+2. **Upload Your Zips**:
+   - https://filebin.net/
+   - Click on the **Add file** button and select **Upload files**.
+
+## Step 3: Enter URL and Run the Action
+
+1. **Navigate to the Actions Tab**:
+   - Go to the **Actions** tab in your forked repository.  
+   - This tab lists all workflows in the repository. Find the workflow designed to process your UUPDumps.
+
+2. **Run the Action**:
+   - In the Actions tab, locate the workflow named **"Builds"**.
+   - Click on the workflow and press the **Run workflow** button.
+   - Enter the code you got from filebin to the zip you uploaded in Step 2.
+     - You should give the code given by the site. The code should look something like:  
+       `0uv3y9tjqm0hjb51`
+   - Click **Run workflow** to trigger the GitHub Action.
+
+## Step 4: View Your Fresh Windows ISO being baked from the Action's Output
+
+1. **Wait for the Action to Complete**:
+   - The workflow will begin processing. This includes downloading the your Zips, extracting files inside then start baking your ISO.
+   - Wait for the action to finish. You can monitor the progress from the GitHub Actions interface.
+
+2. **Check the Output**:
+   - Once the action completes, view the **logs** from the workflow run.
+   - You’ll see the URL to download your freshly made Windows ISO printed at the bottom in step "Upload Files & Getting Links".
 
