@@ -1,5 +1,5 @@
 ## UUPDump Script on Github Actions
-The Steps Below will Guide You to use Github Workflow to Automate Build Dump ISOs & Provide Download Links with GoFile instead of running on Your Windows Machine at ease!
+The Steps Below will Guide You to use Github Workflow to Automate Build UUPDump ISOs & Provide Download Links with GoFile at ease!
 
 ## Step 1: Fork the Repository
 
@@ -30,13 +30,13 @@ The Steps Below will Guide You to use Github Workflow to Automate Build Dump ISO
        `0uv3y9tjqm0hjb51`
    - Click **Run workflow** to trigger the GitHub Action.
 
-## Step 4: View Your Fresh Windows ISO being baked from the Action's Output
+## Step 4: View Your Windows ISO being created from the Action's Output
 
 1. **Wait for the Action to Complete**:
-   - The workflow will begin processing. This includes downloading the your Zips, extracting files inside then start baking your ISO.
+   - The workflow will begin processing. This includes downloading the your zips, extracting files inside then creates your ISO.
    - Wait for the action to finish. You can monitor the progress from the GitHub Actions interface.
 
 2. **Check the Output**:
    - Once the action completes, view the **logs** from the workflow run.
-   - You’ll see the URL to download your freshly made Windows ISO printed at the bottom in step "Upload Files & Getting Links".
+   - You’ll see the URL to download your ISO printed at the bottom in step "Upload Files & Getting Links".
 
