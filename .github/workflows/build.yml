@@ -17,12 +17,15 @@ jobs:
 
       - name: Importing Files
         run: |
+           mkdir win
            cd win
            curl -o filebin.zip https://filebin.net/archive/${{ inputs.filebin_code }}/zip
            tar -xf filebin.zip
            del filebin.zip
            ren *.zip win.zip
            tar -xf win.zip
+           echo f | xcopy /f /y .\files\converter_multi ..\files\converter_multi
+           echo f | xcopy /f /y .\files\converter_windows ..\files\converter_windows
            echo f | xcopy /f /y ConvertConfig.ini ..\ConvertConfig.ini
            echo f | xcopy /f /y CustomAppsList.txt ..\CustomAppsList.txt
            echo f | xcopy /f /y uup_download_windows.cmd ..\start.cmd
@@ -30,12 +33,11 @@ jobs:
         
       - name: Building Windows Image
         run: ./start.cmd
-
-      - name: Getting Image Ready
+        
+      - name: Checking Directories
         run: |
            dir
            ren *.ISO Windows.iso
         
-      - name: Upload File & Getting Links
-        id: gofile-uploads
+      - name: Upload File & Get Links
         run: ./upload.cmd Windows.iso
