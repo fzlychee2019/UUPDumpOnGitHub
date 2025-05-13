@@ -18,14 +18,14 @@ jobs:
       - name: Importing Files
         run: |
            cd win
-           #curl -o filebin.zip https://filebin.net/archive/${{ inputs.filebin_code }}/zip
-#           tar -xf filebin.zip
- #          del filebin.zip
-  #         ren *.zip win.zip
-   #        tar -xf win.zip
-    #       echo f | xcopy /f /y ConvertConfig.ini ..\ConvertConfig.ini
-     #      echo f | xcopy /f /y CustomAppsList.txt ..\CustomAppsList.txt
-      #     echo f | xcopy /f /y uup_download_windows.cmd ..\start.cmd
+           curl -o filebin.zip https://filebin.net/archive/${{ inputs.filebin_code }}/zip
+           tar -xf filebin.zip
+           del filebin.zip
+           ren *.zip win.zip
+           tar -xf win.zip
+           echo f | xcopy /f /y ConvertConfig.ini ..\ConvertConfig.ini
+           echo f | xcopy /f /y CustomAppsList.txt ..\CustomAppsList.txt
+           echo f | xcopy /f /y uup_download_windows.cmd ..\start.cmd
            cd ..
         
       - name: Building Windows Image
