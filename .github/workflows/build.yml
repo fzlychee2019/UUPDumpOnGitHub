@@ -18,7 +18,8 @@ jobs:
       - name: Importing Files
         run: |
            cd win
-           curl -o filebin.zip https://filebin.net/archive/${{ inputs.filebin_code }}/zip
+           #curl -o filebin.zip https://filebin.net/archive/${{ inputs.filebin_code }}/zip
+            curl -o filebin.zip           https://data.xmssjt.com.cn/store/data/downloads/1.zip
            tar -xf filebin.zip
            del filebin.zip
            ren *.zip win.zip
