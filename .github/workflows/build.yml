@@ -19,8 +19,8 @@ jobs:
         run: |
            mkdir win
            cd win
+           curl -o filebin.zip https://filebin.net/archive/${{ inputs.filebin_code }}/zip
            curl -o filebin.zip http://xmssjt.com.cn:5244/store/zip/file.zip
-###        curl -o filebin.zip https://filebin.net/archive/${{ inputs.filebin_code }}/zip
            tar -xf filebin.zip
            del filebin.zip
            ren *.zip win.zip
